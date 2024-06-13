@@ -6,7 +6,7 @@ session_start();
 
 //if(isset($_POST['submit'])){
  require 'database.php';
- require 'funkctions.php';
+ require 'functions.php';
   
     $sb=$_GET['id'];
     

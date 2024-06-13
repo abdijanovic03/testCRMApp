@@ -4,43 +4,35 @@
 
 session_start();
 
-//if(isset($_POST['submit'])){
- require 'database.php';
- require 'funkctions.php';
-  
-    $sb=$_GET['id'];
-    
-    
+require 'database.php';
+require 'functions.php';
 
-    $sql="SELECT id from kandidat where id=?";
-    $stmt=mysqli_stmt_init($conn);
-    if(!mysqli_stmt_prepare($stmt,$sql)){
+$sb = $_GET['id'];
 
-    }else{
-      
-        mysqli_stmt_bind_param($stmt,"s",$sb);
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_store_result($stmt);
-        $i=mysqli_stmt_num_rows($stmt);
-        if($i>0){
-            $sql="DELETE from kandidat where id='$sb'";
-            $sql1="DELETE from kandidat_skola where id_kandidat='$sb'";
-                     $query_run=mysqli_query($conn,$sql);
-                     $query_run1=mysqli_query($conn,$sql1);
-         if($query_run){
-            if($query_run1){
-            $log="User ".$_SESSION['user']." je izbrisao kandidata ".$sb."";
+$sql = "SELECT id from kandidat where id=?";
+$stmt = mysqli_stmt_init($conn);
+if (!mysqli_stmt_prepare($stmt, $sql)) {
+} else {
+
+   mysqli_stmt_bind_param($stmt, "s", $sb);
+   mysqli_stmt_execute($stmt);
+   mysqli_stmt_store_result($stmt);
+   $i = mysqli_stmt_num_rows($stmt);
+   if ($i > 0) {
+      $sql = "DELETE from kandidat where id='$sb'";
+      $sql1 = "DELETE from kandidat_skola where id_kandidat='$sb'";
+      $query_run = mysqli_query($conn, $sql);
+      $query_run1 = mysqli_query($conn, $sql1);
+      if ($query_run) {
+         if ($query_run1) {
+            $log = "User " . $_SESSION['user'] . " je izbrisao kandidata " . $sb . "";
             addToLogs($log);
-           header("Location: ../kandidati.php?success"); }
-        }
-          
-         }else{
-          
-          header("Location: ../kandidati.php?error"); 
+            header("Location: ../kandidati.php?success");
          }
-        }
+      }
+   } else {
 
-
-
-    
+      header("Location: ../kandidati.php?error");
+   }
+}
 ?>

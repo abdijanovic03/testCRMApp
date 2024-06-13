@@ -4,14 +4,11 @@
 
 session_start();
 
-//if(isset($_POST['submit'])){
  require 'database.php';
- require 'funkctions.php';
+ require 'functions.php';
   
     $sb=$_POST['sb'];
     $naziv_zvanja=$_POST['naziv_zvanja'];
-    
-    
 
     $sql="SELECT id from zvanje where id=?";
     $stmt=mysqli_stmt_init($conn);
@@ -53,8 +50,4 @@ session_start();
     }
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
-  /*}else{
-    echo "arink";
-  }
-*/
  ?>

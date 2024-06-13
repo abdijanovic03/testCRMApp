@@ -1,26 +1,18 @@
-
-<?php 
+<?php
 require_once 'includes/header.php';
-
 ?>
 <style>
-  label{
+  label {
     color: black;
   }
 </style>
-
 <br><br>
- <div class="container w-50"  >
- <form action="includes/dodajL-inc.php" method="post">
-
- 
-<div class="form-floating">
-  <input type="text" class="form-control" name="naziv_linka" id="floatingInputValue"  >
-  <label for="floatingInputValue">Naziv linka</label>
-</div><br>
-
- 
-<button type="submit" style="float: left;" name="submit" class="btn btn-primary">Spremi</button>
-
-</form>
+<div class="container w-50">
+  <form action="includes/dodajL-inc.php" method="post">
+    <div class="form-floating">
+      <input type="text" class="form-control" name="naziv_linka" id="floatingInputValue">
+      <label for="floatingInputValue">Naziv linka</label>
+    </div><br>
+    <button type="submit" style="float: left;" name="submit" class="btn btn-primary">Spremi</button>
+  </form>
 </div>

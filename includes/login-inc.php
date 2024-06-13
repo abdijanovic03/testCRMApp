@@ -31,44 +31,12 @@ if(empty($username) || empty($password)){
      }
      $idU=$count['sb'];
      $_SESSION['user']=$idU; 
-        
-     
-     
 
   header("Location: ../index.php");
         }else{
             header("Location: ../index.php");
         }
-        /*
-        $sqlpw="SELECT password from login where username='$username'";
-        $stmtpw=mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($stmtpw,$sqlpw)){
-            echo "1 2";
-        }else{
-            mysqli_stmt_bind_param($stmtpw,"s",$password);
-            mysqli_stmt_execute($stmtpw);
-            $resultpw=mysqli_stmt_get_result($stmtpw);
-            if($checkpw=mysqli_fetch_assoc($resultpw)){
-            echo "3";
-            }else{
-                echo "2";
-            }
-
-        }
-
-        
-
-
-    }else{
-        echo "3";
     }
-       */ 
-    }
-
-
     
 }
-
-
-
 ?>
