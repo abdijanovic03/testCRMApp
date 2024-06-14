@@ -16,7 +16,7 @@ session_start();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha512-U6K1YLIFUWcvuw5ucmMtT9HH4t0uz3M366qrF5y4vnyH6dgDzndlcGvH/Lz5k8NFh80SN95aJ5rqGZEdaQZ7ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-  <title>CRM App</title>
+  <title>NexusCRM</title>
 </head>
 <style>
   .dataTables_wrapper .dataTables_length,
@@ -25,6 +25,13 @@ session_start();
   .dataTables_wrapper .dataTables_processing,
   .dataTables_wrapper .dataTables_paginate {
     color: white;
+  }
+  .dataTables_wrapper .dataTables_length select {
+    color: white;
+  }
+
+  .dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: white !important;
   }
 </style>
 
@@ -36,7 +43,7 @@ session_start();
 
         <div class="w-55">
           <a class="nav-link " style="color: white;" aria-current="page" href="index.php">
-            <h3 class="float-md-start mb-0"> <img class="rounded" src="includes/photo.png" height="48px" width="48px"> CRM App</h3>
+            <h3 class="float-md-start mb-0"> <img class="rounded" src="includes/logo.jpg" height="48px" width="48px"> NexusCRM</h3>
           </a>
           <nav class="nav nav-masthead justify-content-center float-md-end">
             <a class="nav-link " style="color: white;" aria-current="page" href="index.php">Home</a>
@@ -120,7 +127,7 @@ session_start();
             ?>
               <div class="dropdown text-end">
                 <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" style="margin-left: 15px;" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <img src="includes/photo.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+                  <img src="includes/logo.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
                 </a>
                 <ul class="dropdown-menu text-small bg-white" aria-labelledby="dropdownUser1">
                   <li><a class="dropdown-item" href="dodajK.php">Dodaj kandidata</a></li>
